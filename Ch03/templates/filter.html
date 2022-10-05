@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter template</title>
+</head>
+
+<body>
+    <h1>value={{ value }}, value|add'2'={{ value|add:"2" }}</h1>
+    <h1>value|stringformat:"E"={{ value | stringformat:"E" }}</h1>
+    <h1>list1={{ list1 }}, list1|length={{ list1|length }}</h1>
+    {% if pw == "芝麻開門" %}
+    <h1 style="color: red;">密碼正確</h1>
+    {% else %}
+    <h1 style="color: red;">密碼錯誤</h1>
+    {% endif %}
+    <h1>value2={{ value2 }}, value2|yesno:"yes,no,Cancellation"={{ value2|yesno }}</h1>
+    <h1>html={{ html }},html|safe={{ html|safe }}</h1>
+</body>
+
+</html>

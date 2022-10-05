@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>登入介面 - login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+
+<body>
+    <div class="boxLogin">
+        <form action="." method="POST" id="loginform">
+            {% csrf_token %}
+            <div class="fields">
+                <p class="sep">
+                    <label for="username" class="small">admin user</label>
+                    <input name="username" type="text" id="username" required>
+                </p>
+                <p class="sep">
+                    <label for="password" class="small">admin passwd</label>
+                    <input type="password" name="password" id="password" required>
+                </p>
+                <div class="action">
+                    <input type="submit" class="butDef" value="登入系統">
+                    <input type="button" name="button1" value="退回首頁" onclick="window.location='/index/'" />
+                </div>
+                <span style="color: red;">{{ messages }}</span>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

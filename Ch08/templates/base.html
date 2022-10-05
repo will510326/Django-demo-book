@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news system - base</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div id="warp">
+        <div id="header">
+            <div class="logo"><img src="{% static 'images/DWonline.png' %}" alt=""></div>
+        </div>
+        <div class="headings">
+            <h2>news system</h2>
+        </div>
+        {% block content %}{% endblock %}
+        <div id="footer">&copy; Copyright 2022 eHappy Studio News Systems</div>
+    </div>
+</body>
+
+</html>

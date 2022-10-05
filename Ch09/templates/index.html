@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>登入</title>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+    <div id="warp">
+        <form action="." method="POST" name="form1">
+            {% csrf_token %}
+            <table border="0" align="center" cellpadding="4" cellspacing="1">
+                <tr>
+                    <th align="right" valign="baseline">帳號</th>
+                    <td valign="baseline">{{postform.username}}</td>
+                </tr>
+                <tr>
+                    <th align="right" valign="baseline">密碼</th>
+                    <td valign="baseline">{{postform.pd}}</td>
+                </tr>
+                <tr>
+                    <th align="right" valign="baseline">驗證碼</th>
+                    <td valign="baseline">{{postform.captcha}}</td>
+                </tr>
+                <tr>
+                    <th colspan="2" align="center" valign="baseline">
+                        <input type="submit" name="button" id="button" value="送出">
+                        <input type="reset" name="button2" id="button2" value="重設">
+                    </th>
+                </tr>
+            </table>
+            <span style="color:red">{{message}}</span>
+        </form>
+    </div>
+</body>
+
+</html>

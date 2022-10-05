@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+
+<body>
+    <h2>Hololive</h2>
+    {% if request.user.is_authenticated %}
+    <h5>歡迎光臨：{{ name }}</h5>
+    <p><a href="/logout/">Logout</a></p>
+    {% else %}
+    <p>尚未登入喔！廢物</p>
+    <a href="/login/">Login</a>
+    {% endif %}
+    <span style="color: red;">{{ message }}</span>
+</body>
+
+</html>

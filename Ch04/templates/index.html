@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+
+<title>顯示全部資料</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+    table {
+        /* border: 1px solid gray; */
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid;
+        padding: 5px;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<h2>顯示 student 資料表</h2>
+<table>
+    <thead>
+        <tr>
+            <th>編號</th>
+            <th>姓名</th>
+            <th>性別</th>
+            <th>生日</th>
+            <th>信箱</th>
+            <th>電話</th>
+            <th>地址</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for unit in units %}
+        <tr>
+            <td>{{ unit.id }}</td>
+            <td>{{ unit.cName }}</td>
+            <td>{{ unit.cSex }}</td>
+            <td>{{ unit.cBirthday}}</td>
+            <td>{{unit.cEmail }}</td>
+            <td>{{ unit.cPhone }}</td>
+            <td>{{ unit.cAddr}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

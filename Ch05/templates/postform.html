@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>
+    postform template
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+{% block content %}
+<form action="." method="POST" name="form1">
+    {% csrf_token %}
+    <table border="1" cellspacing="1" cellpadding="4">
+        {{ postform }}
+    </table>
+</form>
+{% endblock %}
