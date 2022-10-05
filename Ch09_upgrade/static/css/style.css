@@ -11,12 +11,14 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	background-image: url(images/bg.gif);
+	background-color: #ffffff;
 }
 
 form {
 	margin: 0px;
 }
 
+/* -----base.html----- */
 #warp {
 	display: table;
 	height: 100%;
@@ -24,7 +26,13 @@ form {
 	margin-left: auto;
 	width: 600px;
 }
-
+#warp table{
+	width: 600px;
+	border: 0;
+	align-items: center;
+	padding: 8px;
+	border-spacing: 0;
+}
 #masterDiv {
 	height: 40px;
 	width: 440px;
