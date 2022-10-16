@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    {% load extras %}
+	{% load extras %}
 </head>
+
 <body>
 	subjects = {{subjects}}<br />
 	scores = {{scores}}<br />
 	<h2>成績單</h2>
 	{% for subject in subjects %}
-		{{subject}}：
-		{{scores|extras:forloop.counter0}}<br />
+	{{subject}}：
+	{{scores|extras:forloop.counter0}}<br />
 	{% endfor %}
 </body>
+
 </html>
